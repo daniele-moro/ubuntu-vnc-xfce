@@ -1,0 +1,15 @@
+os: linux
+dist: trusty
+language: python
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: check-build
+      name: "Build Docker container"
+      script:
+        - make build
+
+stages:
+  - check-build
