@@ -4,6 +4,10 @@ language: python
 services:
   - docker
 
+branches:
+  only:
+    - master
+
 jobs:
   include:
     - stage: check-build
